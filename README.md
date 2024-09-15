@@ -51,6 +51,96 @@ pip install pypdf PyPDF2 pdfminer.six
    ```
 4. Check that it processes the PDFs and creates an `Output` folder with the results.
 
+
+# PDF Processor Command-line Options
+
+ExtractPDFText supports several command-line options; here is a detailed description of each option:
+
+1. `-i` or `--input`
+   - Purpose: Specifies the input directory containing PDF files to process.
+   - Usage: `pdf_processor.exe -i C:\path\to\pdf\files`
+   - Default: If not specified, the program looks for a folder called 'data' in the folder where the executable is located.
+
+2. `-o` or `--output`
+   - Purpose: Specifies the output directory where processed text files will be saved.
+   - Usage: `pdf_processor.exe -o C:\path\to\output\directory`
+   - Default: If not specified, an 'Output' folder is created at the same level as the input folder.
+
+3. `-r` or `--recursive`
+   - Purpose: Enables recursive processing of PDF files in subdirectories.
+   - Usage: `pdf_processor.exe -r`
+   - Default: If not specified, only PDF files in the top-level input folder are processed.
+
+4. `-v` or `--verbose`
+   - Purpose: Increases output verbosity, providing more detailed information during processing.
+   - Usage: `pdf_processor.exe -v`
+   - Default: If not specified, minimal output is provided.
+
+5. `--links-only`
+   - Purpose: Extracts only hyperlinks from the PDF, skipping full text extraction.
+   - Usage: `pdf_processor.exe --links-only`
+   - Default: If not specified, both text and links are extracted.
+
+Feel free to combine these options as needed. For example:
+```
+pdf_processor.exe -i C:\PDFs -o C:\Output -r -v --links-only
+```
+
+This command assumes pdf_processor.exe is located in C:\ and would process all PDFs in C:\PDFs and its subdirectories, save the output to C:\Output, provide verbose output, and extract only the links.
+
+If you run the program without any options, it will use default values and look for a 'data' folder.
+
+
+
+# PDF Processor Default Folder Structure
+
+The PDF Processor is designed to work with a specific folder structure by default, although this can be overridden using command-line options. Here's the expected default structure:
+
+```
+[Parent Folder]
+│
+├── pdf_processor.exe
+│
+├── data
+│   ├── file1.pdf
+│   ├── file2.pdf
+│   └── ...
+│
+└── Output
+    ├── file1.txt
+    ├── file2.txt
+    └── ...
+```
+
+## Explanation:
+
+1. **[Parent Folder]**: 
+   This is the main folder where the executable is placed. It can be named anything.
+
+2. **pdf_processor.exe**: 
+   The executable file should be placed directly in the parent folder.
+
+3. **data**: 
+   - This is the default input folder.
+   - It should be a subdirectory of the parent folder at the same level as the executable.
+   - All PDF files to be processed should be placed in this folder.
+   - The program will look for this folder by default if no input folder is specified.
+
+4. **Output**: 
+   - This is the default output folder.
+   - It will be created automatically by the program if it doesn't exist.
+   - It will be created at the same level as the 'data' folder.
+   - All processed text files will be saved here.
+
+## Notes:
+
+- If the 'data' folder is not found in the expected location, the program will attempt to find it in several predefined locations relative to the executable.
+- You can override the default input and output directories using the `-i` and `-o` command-line options respectively.
+- If you use the `-r` (recursive) option, the program will also process PDF files in subdirectories of the input folder.
+
+This default structure allows for easy setup and use of the PDF Processor without needing to specify custom directories. Simply place your PDF files in the 'data' folder and run the executable.
+
+ 
 ## Troubleshooting
 - If you encounter any "module not found" errors, you may need to explicitly include those modules. Use the `--hidden-import` option with PyInstaller:
   ```
