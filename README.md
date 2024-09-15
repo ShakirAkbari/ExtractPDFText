@@ -18,7 +18,7 @@ Follow these steps to turn the pdf_processor.py script into a standalone executa
 
 ## Step 2: Prepare Your Script
 1. Download pdf_processor.py.
-2. Place the script in a known directory, e.g., C:\Projects\PDFProcessor\.
+2. Place the script in a known folder, e.g., C:\Projects\PDFProcessor\.
 
 ## Step 3: Install Required Dependencies
 Install libraries: 
@@ -28,7 +28,7 @@ pip install pypdf PyPDF2 pdfminer.six
 
 ## Step 4: Create the Executable
 1. Open a command prompt or terminal.
-2. Navigate to the directory containing your pdf_processor.py script:
+2. Navigate to the folder containing your pdf_processor.py script:
    ```
    cd C:\Projects\PDFProcessor
    ```
@@ -39,11 +39,11 @@ pip install pypdf PyPDF2 pdfminer.six
    The `--onefile` option creates a single executable file.
 
 ## Step 5: Locate the Executable
-1. After PyInstaller finishes, you'll find a new `dist` folder in your current directory.
+1. After PyInstaller finishes, you'll find a new `dist` folder in your current folder.
 2. Inside the `dist` folder, you'll find your pdf_processor.exe file.
 
 ## Step 6: Test the Executable
-1. Create a `data` folder in the same directory as your executable.
+1. Create a `data` folder in the same folder as your executable.
 2. Place some PDF files in the `data` folder.
 3. Run the executable by double-clicking it or from the command line:
    ```
@@ -57,13 +57,13 @@ pip install pypdf PyPDF2 pdfminer.six
 ExtractPDFText supports several command-line options; here is a detailed description of each option:
 
 1. `-i` or `--input`
-   - Purpose: Specifies the input directory containing PDF files to process.
+   - Purpose: Specifies the input folder containing PDF files to process.
    - Usage: `pdf_processor.exe -i C:\path\to\pdf\files`
    - Default: If not specified, the program looks for a folder called 'data' in the folder where the executable is located.
 
 2. `-o` or `--output`
-   - Purpose: Specifies the output directory where processed text files will be saved.
-   - Usage: `pdf_processor.exe -o C:\path\to\output\directory`
+   - Purpose: Specifies the output folder where processed text files will be saved.
+   - Usage: `pdf_processor.exe -o C:\path\to\output\folder`
    - Default: If not specified, an 'Output' folder is created at the same level as the input folder.
 
 3. `-r` or `--recursive`
@@ -122,7 +122,7 @@ The PDF Processor is designed to work with a specific folder structure by defaul
 
 3. **data**: 
    - This is the default input folder.
-   - It should be a subdirectory of the parent folder at the same level as the executable.
+   - It should be a subfolder of the parent folder at the same level as the executable.
    - All PDF files to be processed should be placed in this folder.
    - The program will look for this folder by default if no input folder is specified.
 
