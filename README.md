@@ -1,5 +1,5 @@
 # ExtractPDFText
-The PDF Processor is a standalone executable program designed to automate the extraction of text and hyperlinks from PDF files. It processes multiple PDF documents in batch, creating corresponding text files that contain the extracted content.
+The PDF Processor is a standalone executable program designed to automate the extraction of text and hyperlinks from PDF files. It processes multiple PDF documents in batch, creating corresponding text files that contain the extracted content. The resulting standalone executable program is about 35megs which I am having a hard time uploading to GitHub (the file is too big). Feel free to contact me if you'd like me to send you the standalone executable program. 
 
 # Instructions for Creating the PDF Processor Executable
 
