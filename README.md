@@ -6,8 +6,8 @@ The PDF Processor is a standalone executable program designed to automate the ex
 Follow these steps to turn the pdf_processor.py script into a standalone executable (.exe) file using PyInstaller:
 
 ## Prerequisites
-1. Ensure you have Python installed on your system (preferably Python 3.6 or later).
-2. Make sure you have pip (Python package installer) installed.
+1. Ensure you have Python installed on your system (preferably Python 3.6 or later). https://www.python.org/downloads/
+2. Make sure you have pip (Python package installer) installed. https://pip.pypa.io/en/stable/installation/
 
 ## Step 1: Install PyInstaller
 1. Open a command prompt or terminal.
